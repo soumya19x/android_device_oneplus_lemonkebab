@@ -221,3 +221,7 @@
 
 # Vibrator
 /sys/devices/platform/soc/a8c000.i2c/i2c-3/3-005a/leds/vibrator/level                     u:object_r:sysfs_vibrator:s0
+
+
+# Data files
+/data/per_boot(/.*)?                                                    u:object_r:per_boot_file:s0
