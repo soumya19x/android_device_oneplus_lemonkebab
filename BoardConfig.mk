@@ -22,6 +22,7 @@ BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
 BOARD_VENDOR := oneplus
 
 DEVICE_PATH := device/oneplus/lemonkebab
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := kebab|OnePlus8T|oneplus8t|lemonades|OnePlus9R|oneplus9r
