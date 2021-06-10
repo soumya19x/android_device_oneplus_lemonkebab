@@ -41,6 +41,7 @@ import androidx.preference.PreferenceScreen;
 
 import org.aosp.device.OnePlusSettings.ModeSwitch.EdgeTouchSwitch;
 import org.aosp.device.OnePlusSettings.ModeSwitch.DCModeSwitch;
+import org.aosp.device.OnePlusSettings.ModeSwitch.DolbySwitch;
 import org.aosp.device.OnePlusSettings.ModeSwitch.GameModeSwitch;
 import org.aosp.device.OnePlusSettings.ModeSwitch.HBMModeSwitch;
 import org.aosp.device.OnePlusSettings.Preferences.CustomSeekBarPreference;
@@ -78,10 +79,12 @@ public class OnePlusSettings extends PreferenceFragment
     public static final String KEY_EDGE_TOUCH = "edge_touch";
 
     private static final String PREF_DOZE = "advanced_doze_settings";
+    private static final String KEY_ENABLE_DOLBY_ATMOS = "enable_dolby_atmos";
 
     private static final String FILE_LEVEL = "/sys/devices/platform/soc/a8c000.i2c/i2c-3/3-005a/leds/vibrator/level";
     public static final String DEFAULT = "3";
 
+    private static DolbySwitch mDolbySwitch;
     private static ListPreference mFpsInfoColor;
     private static ListPreference mFpsInfoPosition;
     private static ListPreference mNrModeSwitcher;
@@ -94,6 +97,7 @@ public class OnePlusSettings extends PreferenceFragment
     private static SwitchPreference mEdgeTouchSwitch;
     private static SwitchPreference mAutoHBMSwitch;
     private static SwitchPreference mMuteMedia;
+    private static SwitchPreference mEnableDolbyAtmos;
 
     private static CustomSeekBarPreference mFpsInfoTextSizePreference;
     private static VibratorStrengthPreference mVibratorStrengthPreference;
@@ -167,6 +171,11 @@ public class OnePlusSettings extends PreferenceFragment
         mNrModeSwitcher = (ListPreference) findPreference(KEY_NR_MODE_SWITCHER);
         mNrModeSwitcher.setOnPreferenceChangeListener(this);
 
+        mDolbySwitch = new DolbySwitch(getContext());
+        mEnableDolbyAtmos = (SwitchPreference) findPreference(KEY_ENABLE_DOLBY_ATMOS);
+        mEnableDolbyAtmos.setChecked(mDolbySwitch.isCurrentlyEnabled());
+        mEnableDolbyAtmos.setOnPreferenceChangeListener(this);
+
         mGameModeSwitch = (SwitchPreference) findPreference(KEY_GAME_SWITCH);
         mGameModeInfo = (Preference) findPreference(KEY_GAME_INFO);
         if (isGamingModeSupported()) {
@@ -227,6 +236,8 @@ public class OnePlusSettings extends PreferenceFragment
             } else {
                 getContext().stopServiceAsUser(fpsinfo, UserHandle.CURRENT);
             }
+        } else if (preference == mEnableDolbyAtmos) {
+            mDolbySwitch.setEnabled((Boolean) newValue);
         } else if (preference == mFpsInfoPosition) {
             int position = Integer.parseInt(newValue.toString());
             Context mContext = getContext();
