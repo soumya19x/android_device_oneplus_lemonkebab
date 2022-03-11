@@ -4,6 +4,12 @@ ro.com.google.lens.oem_camera_package=com.oneplus.camera
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
+# Graphics
+debug.hwui.renderer=skiagl
+debug.renderengine.backend=skiaglthreaded
+renderthread.skia.reduceopstasksplitting=true
+
+
 # Padding for Gboard from OOS
 ro.com.google.ime.kb_pad_port_l=7
 ro.com.google.ime.kb_pad_port_r=7
