@@ -92,8 +92,8 @@ vendor/lib/libaudcal.so
 vendor/lib/libqtigef.so
 vendor/lib64/libadsprpc.so
 
-# Audio firmware
-vendor/firmware/tfa98xx.cnt
+# Audio firmware - from OnePlus9Oxygen_22.I.13_OTA_0130_all_2111112106_b924739
+vendor/firmware/tfa98xx.cnt|5578bfb86a4123af049c2885af7b30d3fd0a53e4
 
 # Authsecret
 vendor/bin/hw/android.hardware.authsecret@1.0-service-qti
