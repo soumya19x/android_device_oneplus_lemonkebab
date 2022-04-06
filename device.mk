@@ -630,7 +630,9 @@ PRODUCT_PACKAGES += \
     libcodec2_soft_vp8dec \
     libcodec2_soft_vp9enc \
     libcodec2_soft_vp8enc \
-    libcodec2_soft_xaacdec
+    libcodec2_soft_xaacdec \
+    libcodec2_hidl@1.0.vendor:32 \
+    libcodec2_vndk.vendor:32
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
