@@ -178,6 +178,7 @@ debug.cpurend.vsync=false
 debug.sf.disable_client_composition_cache=1
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
+debug.hwui.use_buffer_age=false
 
 # Incremental FS
 ro.incremental.enable=true
