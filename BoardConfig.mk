@@ -21,6 +21,9 @@ BOARD_VENDOR := oneplus
 
 DEVICE_PATH := device/oneplus/kebab
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := kebab|OnePlus8T|oneplus8t|lemonades|OnePlus9R|oneplus9r
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
