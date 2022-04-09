@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=kebab
+DEVICE=lemonkebab
 VENDOR=oneplus
 
 # Load extract_utils and do some sanity checks
@@ -28,7 +28,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false
 
 # Warning headers and guards
-write_headers "kebab"
+write_headers "lemonkebab"
 
 # The standard device blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" false

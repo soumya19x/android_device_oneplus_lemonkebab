@@ -18,8 +18,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from kebab device
-$(call inherit-product, device/oneplus/kebab/device.mk)
+# Inherit from lemonkebab device
+$(call inherit-product, device/oneplus/lemonkebab/device.mk)
 
 # Inherit some common Nameless AOSP stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
@@ -31,17 +31,10 @@ TARGET_BOOT_ANIMATION_RES := 1080
 CUSTOM_BUILD_TYPE := Official
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_kebab
-PRODUCT_DEVICE := kebab
+PRODUCT_NAME := aosp_lemonkebab
+PRODUCT_DEVICE := lemonkebab
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := KB2003
-
-PRODUCT_SYSTEM_NAME := OnePlus8T
-PRODUCT_SYSTEM_DEVICE := OnePlus8T
+PRODUCT_MODEL := LE2101
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=OnePlus8T \
-    TARGET_PRODUCT=OnePlus8T

@@ -1,9 +1,9 @@
 hidl_package_root {
     name: "vendor.goodix",
-    path: "device/oneplus/kebab/interfaces/goodix",
+    path: "device/oneplus/lemonkebab/interfaces/goodix",
 }
 
 hidl_package_root {
     name: "vendor.oneplus",
-    path: "device/oneplus/kebab/interfaces/oneplus",
+    path: "device/oneplus/lemonkebab/interfaces/oneplus",
 }

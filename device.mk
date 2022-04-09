@@ -573,4 +573,4 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/oneplus/kebab/kebab-vendor.mk)
+$(call inherit-product, vendor/oneplus/lemonkebab/lemonkebab-vendor.mk)
