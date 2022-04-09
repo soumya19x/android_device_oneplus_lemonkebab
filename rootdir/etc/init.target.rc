@@ -273,3 +273,6 @@ on property:persist.sys.oemlog.pullxlog=true
 
 on property:ro.boot.project_codename=kebab
     setprop persist.radio.multisim.config dsds
+
+on property:ro.boot.project_codename=lemonades
+    setprop persist.radio.multisim.config dsds
