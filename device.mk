@@ -412,7 +412,10 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw
+    libstagefrighthw \
+    libstagefrighthw_omx \
+    libstagefrighthw_foundation \
+    libstagefright_omx.vendor
 
 # OnePlus-fwk
 PRODUCT_PACKAGES += \
