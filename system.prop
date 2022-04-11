@@ -1,7 +1,6 @@
 # Audio
 audio.offload.min.duration.secs=30
 persist.vendor.audio.hac.enable=false
-persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 
 # Bluetooth
 persist.vendor.bt.a2dp.aac_whitelist=false
@@ -38,17 +37,10 @@ pm.dexopt.bg-dexopt=everything
 pm.dexopt.boot=verify
 pm.dexopt.first-boot=quicken
 
-# Disable vsync for cpu rendered apps
-debug.cpurend.vsync=false
-
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
-
-# IOP
-vendor.iop.enable_prefetch_ofr=0
-vendor.iop.enable_uxe=0
 
 # Media
 media.stagefright.enable-player=true
@@ -67,10 +59,6 @@ persist.mm.enable.prefetch=true
 
 # Netflix
 ro.netflix.bsp_rev=Q8250-19134-1
-
-# Perf
-ro.vendor.qti.core_ctl_max_cpu=4
-ro.vendor.qti.core_ctl_min_cpu=2
 
 # Radio
 ro.telephony.default_network=33,22
