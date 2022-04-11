@@ -9,7 +9,6 @@ debug.hwui.renderer=skiagl
 debug.renderengine.backend=skiaglthreaded
 renderthread.skia.reduceopstasksplitting=true
 
-
 # Padding for Gboard from OOS
 ro.com.google.ime.kb_pad_port_l=7
 ro.com.google.ime.kb_pad_port_r=7
@@ -22,3 +21,7 @@ ro.com.baidu.input.pad_port_r=14
 ro.com.baidu.input.pad_land_l=19
 ro.com.baidu.input.pad_land_r=19
 ro.com.baidu.input.pad_land_b=10
+
+# Camera
+log.tag.CHIUSECASE=ERROR
+persist.vendor.camera.logInfoMask=false
