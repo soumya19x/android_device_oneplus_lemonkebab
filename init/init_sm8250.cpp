@@ -50,64 +50,39 @@ void property_override(char const prop[], char const value[]) {
     __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
+void load_op8t() {
+  property_override("ro.product.model", "OnePlus 8T");
+  property_override("ro.product.name", "OnePlus8T");
+  property_override("ro.build.product", "OnePlus8T");
+  property_override("ro.product.device", "OnePlus8T");
+  property_override("ro.vendor.product.device", "OnePlus8T");
+  property_override("ro.display.series", "OnePlus 8T");
+}
+
+void load_op9r() {
+  property_override("ro.product.model", "OnePlus 9R");
+  property_override("ro.product.name", "OnePlus9R");
+  property_override("ro.build.product", "OnePlus9R");
+  property_override("ro.product.device", "OnePlus9R");
+  property_override("ro.vendor.product.device", "OnePlus9R");
+  property_override("ro.display.series", "OnePlus 9R");
+}
+
 void vendor_load_properties() {
   int project_name = stoi(android::base::GetProperty("ro.boot.project_name", ""));
   int rf_version = stoi(android::base::GetProperty("ro.boot.rf_version", ""));
   switch(project_name){
     case 19805:
       /* OnePlus 8T */
-      switch (rf_version){
-        case 11:
-          /* China */
-          property_override("ro.product.model", "KB2000");
-          break;
-        case 13:
-          /* India */
-          property_override("ro.product.model", "KB2001");
-          break;
-        case 14:
-          /* Europe */
-          property_override("ro.product.model", "KB2003");
-          break;
-        case 15:
-          /* Global / US Unlocked */
-          property_override("ro.product.model", "KB2005");
-          break;
-        default:
-          /* Generic */
-          property_override("ro.product.model", "KB2005");
-          break;
-      }
+      load_op8t();
       break;
     case 20809:
       /* OnePlus 8T T-Mobile */
-      switch (rf_version){
-        case 12:
-          /* T-Mobile */
-          property_override("ro.product.model", "KB2007");
-          break;
-        default:
-          /* Generic */
-          property_override("ro.product.model", "KB2005");
-          break;
-      }
+      load_op8t();
       break;
     case 20828:
       /* OnePlus 9R */
-      switch (rf_version){
-      case 11:
-          /* China */
-          property_override("ro.product.model", "LE2100");
-          break;
-      case 13:
-          /* India */
-          property_override("ro.product.model", "LE2101");
-          break;
-      default:
-          /* Generic */
-          property_override("ro.product.model", "LE2101");
-          break;
-      }
+      load_op9r();
       break;
   }
 }
