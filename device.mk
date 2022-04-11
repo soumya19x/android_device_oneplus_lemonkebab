@@ -632,8 +632,16 @@ PRODUCT_PACKAGES += \
     libcodec2_soft_vp9enc \
     libcodec2_soft_vp8enc \
     libcodec2_soft_xaacdec \
-    libcodec2_hidl@1.0.vendor:32 \
-    libcodec2_vndk.vendor:32
+    libcodec2 \
+    libcodec2_hidl@1.0.vendor:64 \
+    libcodec2_hidl@1.2.vendor \
+    libcodec2_hidl_client@1.2 \
+    libcodec2-hidl-defaults \
+    libcodec2-hidl-client-defaults \
+    libcodec2-hidl-client-defaults@1.2 \
+    libcodec2-hidl-defaults@1.2 \
+    libcodec2_vndk.vendor  \
+    libdrm.vendor
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
