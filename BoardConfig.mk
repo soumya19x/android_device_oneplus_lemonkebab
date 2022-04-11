@@ -124,8 +124,12 @@ TARGET_SCREEN_DENSITY := 420
 TARGET_USES_COLOR_METADATA := true
 TARGET_USES_DISPLAY_RENDER_INTENTS := true
 TARGET_USES_DRM_PP := true
-TARGET_USES_GRALLOC1 := true
+# Target Uses Gralloc 4
 TARGET_USES_GRALLOC4 := true
+SOONG_CONFIG_NAMESPACES += qtidisplay
+SOONG_CONFIG_qtidisplay := drmpp gralloc4
+SOONG_CONFIG_qtidisplay_drmpp := true
+SOONG_CONFIG_qtidisplay_gralloc4 := true
 TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
 TARGET_USES_QCOM_DISPLAY_BSP := true
