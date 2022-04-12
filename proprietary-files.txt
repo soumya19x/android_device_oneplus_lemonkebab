@@ -793,14 +793,6 @@ vendor/lib64/lib-rcsconfig.so
 vendor/lib64/lib-siputility.so
 vendor/lib64/lib-uceservice.so
 
-# IO prefetcher - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
-vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|8e6cf9adfd871a5f474dd45453be5a1f2321f1b0
-vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc|fd11367b2585702190ef2577ce2ce6fc68f3a2f8
-vendor/lib64/libqti-iopd-client.so|9e7561634158cd01b037e740e51cb22cd1119e04
-vendor/lib64/libqti-iopd.so|7aa0119a10e7d22c43369139f5e115295f5bf937
-vendor/lib64/vendor.qti.hardware.iop@1.0.so|3f40f4c385de9a3d0a44797ae0fd6346034adaf3
-vendor/lib64/vendor.qti.hardware.iop@2.0.so|db29e7381058cf53b2e8827fb2ecb51b981c204e
-
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
 vendor/firmware/ipa_fws.b00
