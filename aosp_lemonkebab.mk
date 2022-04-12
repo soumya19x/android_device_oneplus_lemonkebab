@@ -50,7 +50,7 @@ PRODUCT_MODEL := LE2101
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
-BUILD_FINGERPRINT := "google/raven/raven:12/SP2A.220305.013.A3/8229987:user/release-keys"
+BUILD_FINGERPRINT := "google/raven/raven:12/SP2A.220405.004/8233519:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="raven-user 12 SP2A.220305.013 8229987 release-keys"
+    PRIVATE_BUILD_DESC="raven-user 12 SP2A.220405.004 8233519 release-keys"
