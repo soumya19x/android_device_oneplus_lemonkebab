@@ -518,16 +518,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
-# Surface Flinger
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
-    ro.surface_flinger.has_HDR_display=true \
-    ro.surface_flinger.has_wide_color_display=true \
-    ro.surface_flinger.max_virtual_display_dimension=4096 \
-    ro.surface_flinger.protected_contents=true \
-    ro.surface_flinger.use_color_management=true \
-    ro.surface_flinger.wcg_composition_dataspace=143261696
-
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -687,13 +677,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-# USB Debugging
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp,adb \
-    ro.adb.secure=0 \
-    ro.secure=0 \
-    ro.debuggable=1 
     
 # Inherit from vendor blobs
 $(call inherit-product, vendor/oneplus/lemonkebab/lemonkebab-vendor.mk)
