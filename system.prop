@@ -72,6 +72,10 @@ persist.mm.enable.prefetch=true
 # Netflix
 ro.netflix.bsp_rev=Q8250-19134-1
 
+# OnePlus
+ro.vendor.product.manufacturer.db=OP_PHONE
+ro.vendor.product.device.db=OP_DEVICE
+
 # Radio
 ro.telephony.default_network=33,22
 
