@@ -307,27 +307,39 @@ PRODUCT_PACKAGES += \
     extphonelib_product.xml \
     libvulkan \
     memtrack.kona \
-    vendor.display.config@1.0 \
+    vendor.display.config@1.5 \
+    vendor.display.config@1.9 \
+    vendor.display.config@1.11 \
+    vendor.display.config@1.14 \
+    vendor.display.config@2.0 \
     vendor.display.config@1.0.vendor \
     vendor.display.config@1.1.vendor \
     vendor.display.config@1.2.vendor \
     vendor.display.config@1.3.vendor \
-    vendor.display.config@1.4.vendor \
-    vendor.display.config@1.5.vendor \
-    vendor.display.config@1.6.vendor \
-    vendor.display.config@1.7.vendor \
-    vendor.display.config@1.8.vendor \
-    vendor.display.config@1.9.vendor \
-    vendor.display.config@2.0 \
-    vendor.display.config@2.0.vendor \
-    vendor.oneplus.hardware.display@1.0.vendor \
+    vendor.display.config@1.4.vendor:64 \
+    vendor.display.config@1.5.vendor:64 \
+    vendor.display.config@1.6.vendor:64 \
+    vendor.display.config@1.7.vendor:64 \
+    vendor.display.config@1.8.vendor:64 \
+    vendor.display.config@1.8.vendor:64 \
+    vendor.display.config@1.9.vendor:64 \
+    vendor.display.config@1.11.vendor:64 \
+    vendor.display.config@1.12.vendor:64 \
+    vendor.display.config@1.13.vendor:64 \
+    vendor.display.config@1.14.vendor:64 \
+    vendor.display.config@2.0.vendor:64 \
+    vendor.qti.hardware.display.allocator@3.0.vendor:64 \
+    vendor.qti.hardware.display.allocator@4.0.vendor:64 \
     vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer@3.0.vendor:64 \
     vendor.qti.hardware.display.composer-service \
-    vendor.qti.hardware.display.mapper@1.0.vendor \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor
+    vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.1.vendor
+
 
 # DRM
 PRODUCT_PACKAGES += \
