@@ -25,7 +25,7 @@ DEVICE_PATH := device/oneplus/lemonkebab
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := kebab|OnePlus8T|oneplus8t|lemonades|OnePlus9R|oneplus9r
+TARGET_OTA_ASSERT_DEVICE := OnePlus8T,OnePlus9R,lemonkebab,kebab,lemonades
 
 # Architecture
 TARGET_ARCH := arm64
