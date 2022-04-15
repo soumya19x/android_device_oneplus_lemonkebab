@@ -355,7 +355,9 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.oneplus_kona \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
+    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
+    vendor.oneplus.fingerprint.extension@1.0 \
+    vendor.oneplus.hardware.display@1.0
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
