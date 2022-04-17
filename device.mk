@@ -249,6 +249,9 @@ PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
+PRODUCT_PACKAGES += \
+    vendor.kscope.chgctrl@1.0-service
+
 # Device init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
