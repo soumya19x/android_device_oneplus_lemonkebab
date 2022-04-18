@@ -26,6 +26,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Inherit OnePlusCamera from vendor/oneplus/addons/camera
 $(call inherit-product, vendor/oneplus/addons/camera/camera-vendor.mk)
 
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/misc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt

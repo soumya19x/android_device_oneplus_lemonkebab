@@ -286,3 +286,6 @@ persist.vendor.radio.vdp_on_ims_cap=1
 persist.vendor.qti.telephony.vt_cam_interface=2
 
 vendor.fastrpc.disable.adsprpcd_sensorspd.daemon=1
+
+# APEX
+ro.apex.updatable=false
