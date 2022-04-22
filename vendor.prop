@@ -278,6 +278,7 @@ vendor.display.idle_time=0
 vendor.display.idle_time_inactive=0
 vendor.display.disable_dynamic_fps=1
 vendor.display.disable_rotator_downscale=1
+debug.sf.disable_backpressure=1
 
 # Video Calling
 persist.vendor.radio.report_codec=1
