@@ -15,8 +15,6 @@
 #
 
 on property:sys.performance.level=0
-    chmod 644 /sys/class/thermal/thermal_message/sconfig
-    write /sys/class/thermal/thermal_message/sconfig 0
     write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 0
     write /sys/class/kgsl/kgsl-3d0/force_bus_on 0
     write /sys/class/kgsl/kgsl-3d0/force_clk_on 0
@@ -24,19 +22,11 @@ on property:sys.performance.level=0
     write /sys/class/kgsl/kgsl-3d0/force_rail_on 0
     write /sys/class/kgsl/kgsl-3d0/idle_timer 64
     write /sys/class/kgsl/kgsl-3d0/throttling 1
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
-    write /sys/module/lpm_levels/parameters/lpm_ipi_prediction 1
-    write /sys/module/lpm_levels/parameters/lpm_prediction 1
     write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 5
-    write /dev/cpuset/foreground/cpus 2-7
-    write /dev/cpuset/background/cpus 4-5
-    write /dev/cpuset/top-app/cpus 0-5
     write /proc/sys/kernel/sched_upmigrate 71
     write /proc/sys/kernel/sched_downmigrate 65
     write /proc/sys/kernel/sched_group_downmigrate 85
     write /proc/sys/kernel/sched_group_upmigrate 100
-    write /proc/sys/kernel/sched_min_task_util_for_boost 51
-    write /proc/sys/kernel/sched_min_task_util_for_colocation 35
     write /proc/sys/kernel/sched_autogroup_enabled 1
     write /proc/sys/kernel/perf_cpu_time_max_percent 2
     write /proc/sys/vm/dirty_background_ratio 2
@@ -46,8 +36,6 @@ on property:sys.performance.level=0
     write /proc/sys/vm/vfs_cache_pressure 100
 
 on property:sys.performance.level=1
-    chmod 644 /sys/class/thermal/thermal_message/sconfig
-    write /sys/class/thermal/thermal_message/sconfig 12
     write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 0
     write /sys/class/kgsl/kgsl-3d0/force_bus_on 1
     write /sys/class/kgsl/kgsl-3d0/force_clk_on 1
@@ -55,19 +43,11 @@ on property:sys.performance.level=1
     write /sys/class/kgsl/kgsl-3d0/force_rail_on 1
     write /sys/class/kgsl/kgsl-3d0/idle_timer 64
     write /sys/class/kgsl/kgsl-3d0/throttling 1
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
-    write /sys/module/lpm_levels/parameters/lpm_ipi_prediction 1
-    write /sys/module/lpm_levels/parameters/lpm_prediction 1
     write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 5
-    write /dev/cpuset/foreground/cpus 2-7
-    write /dev/cpuset/background/cpus 4-5
-    write /dev/cpuset/top-app/cpus 0-6
     write /proc/sys/kernel/sched_upmigrate 85
     write /proc/sys/kernel/sched_downmigrate 65
     write /proc/sys/kernel/sched_group_downmigrate 85
     write /proc/sys/kernel/sched_group_upmigrate 100
-    write /proc/sys/kernel/sched_min_task_util_for_boost 51
-    write /proc/sys/kernel/sched_min_task_util_for_colocation 35
     write /proc/sys/kernel/sched_autogroup_enabled 1
     write /proc/sys/kernel/perf_cpu_time_max_percent 2
     write /proc/sys/vm/dirty_background_ratio 2
@@ -77,28 +57,17 @@ on property:sys.performance.level=1
     write /proc/sys/vm/vfs_cache_pressure 100
 
 on property:sys.performance.level=2
-    chmod 644 /sys/class/thermal/thermal_message/sconfig
-    write /sys/class/thermal/thermal_message/sconfig 13
-    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 1
     write /sys/class/kgsl/kgsl-3d0/force_bus_on 0
     write /sys/class/kgsl/kgsl-3d0/force_clk_on 0
     write /sys/class/kgsl/kgsl-3d0/force_no_nap 0
     write /sys/class/kgsl/kgsl-3d0/force_rail_on 0
     write /sys/class/kgsl/kgsl-3d0/idle_timer 72
     write /sys/class/kgsl/kgsl-3d0/throttling 0
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
-    write /sys/module/lpm_levels/parameters/lpm_ipi_prediction 1
-    write /sys/module/lpm_levels/parameters/lpm_prediction 1
     write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 4
-    write /dev/cpuset/foreground/cpus 0-5
-    write /dev/cpuset/background/cpus 4-5
-    write /dev/cpuset/top-app/cpus 0-7
     write /proc/sys/kernel/sched_upmigrate 75
     write /proc/sys/kernel/sched_downmigrate 65
     write /proc/sys/kernel/sched_group_downmigrate 85
     write /proc/sys/kernel/sched_group_upmigrate 100
-    write /proc/sys/kernel/sched_min_task_util_for_boost 51
-    write /proc/sys/kernel/sched_min_task_util_for_colocation 35
     write /proc/sys/kernel/sched_autogroup_enabled 1
     write /proc/sys/kernel/perf_cpu_time_max_percent 5
     write /proc/sys/vm/dirty_background_ratio 2
@@ -108,29 +77,17 @@ on property:sys.performance.level=2
     write /proc/sys/vm/vfs_cache_pressure 100
 
 on property:sys.performance.level=3
-    chmod 644 /sys/class/thermal/thermal_message/sconfig
-    write /sys/class/thermal/thermal_message/sconfig 13
-    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 2
     write /sys/class/kgsl/kgsl-3d0/force_bus_on 0
     write /sys/class/kgsl/kgsl-3d0/force_clk_on 0
     write /sys/class/kgsl/kgsl-3d0/force_no_nap 0
     write /sys/class/kgsl/kgsl-3d0/force_rail_on 0
     write /sys/class/kgsl/kgsl-3d0/idle_timer 80
     write /sys/class/kgsl/kgsl-3d0/throttling 0
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
-    write /sys/module/lpm_levels/parameters/lpm_ipi_prediction 1
-    write /sys/module/lpm_levels/parameters/lpm_prediction 1
     write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 3
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/background/cpus 5-7
-    write /dev/cpuset/top-app/cpus 0-7
     write /proc/sys/kernel/sched_upmigrate 71
     write /proc/sys/kernel/sched_downmigrate 65
     write /proc/sys/kernel/sched_group_downmigrate 71
     write /proc/sys/kernel/sched_group_upmigrate 85
-    write /proc/sys/kernel/sched_min_task_util_for_boost 45
-    write /proc/sys/kernel/sched_min_task_util_for_colocation 30
-    write /proc/sys/kernel/printk_devkmsg off
     write /proc/sys/kernel/sched_autogroup_enabled 1
     write /proc/sys/kernel/perf_cpu_time_max_percent 10
     write /proc/sys/vm/dirty_background_ratio 2
@@ -140,28 +97,17 @@ on property:sys.performance.level=3
     write /proc/sys/vm/vfs_cache_pressure 100
 
 on property:sys.performance.level=4
-    chmod 644 /sys/class/thermal/thermal_message/sconfig
-    write /sys/class/thermal/thermal_message/sconfig 9
-    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 2
     write /sys/class/kgsl/kgsl-3d0/force_bus_on 1
     write /sys/class/kgsl/kgsl-3d0/force_clk_on 1
     write /sys/class/kgsl/kgsl-3d0/force_no_nap 1
     write /sys/class/kgsl/kgsl-3d0/force_rail_on 1
     write /sys/class/kgsl/kgsl-3d0/idle_timer 120
     write /sys/class/kgsl/kgsl-3d0/throttling 0
-    write /sys/module/lpm_levels/parameters/sleep_disabled 1
-    write /sys/module/lpm_levels/parameters/lpm_ipi_prediction 0
-    write /sys/module/lpm_levels/parameters/lpm_prediction 0
     write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 2
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/background/cpus 6-7
-    write /dev/cpuset/top-app/cpus 0-7
     write /proc/sys/kernel/sched_upmigrate 80
     write /proc/sys/kernel/sched_downmigrate 50
     write /proc/sys/kernel/sched_group_downmigrate 60
     write /proc/sys/kernel/sched_group_upmigrate 80
-    write /proc/sys/kernel/sched_min_task_util_for_boost 40
-    write /proc/sys/kernel/sched_min_task_util_for_colocation 25
     write /proc/sys/kernel/sched_autogroup_enabled 0
     write /proc/sys/kernel/perf_cpu_time_max_percent 15
     write /proc/sys/vm/dirty_background_ratio 50
@@ -171,28 +117,17 @@ on property:sys.performance.level=4
     write /proc/sys/vm/vfs_cache_pressure 75
 
 on property:sys.performance.level=5
-    chmod 644 /sys/class/thermal/thermal_message/sconfig
-    write /sys/class/thermal/thermal_message/sconfig 9
-    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 2
     write /sys/class/kgsl/kgsl-3d0/force_bus_on 1
     write /sys/class/kgsl/kgsl-3d0/force_clk_on 1
     write /sys/class/kgsl/kgsl-3d0/force_no_nap 1
     write /sys/class/kgsl/kgsl-3d0/force_rail_on 1
     write /sys/class/kgsl/kgsl-3d0/idle_timer 250
     write /sys/class/kgsl/kgsl-3d0/throttling 0
-    write /sys/module/lpm_levels/parameters/sleep_disabled 1
-    write /sys/module/lpm_levels/parameters/lpm_ipi_prediction 0
-    write /sys/module/lpm_levels/parameters/lpm_prediction 0
     write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 1
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/background/cpus 6-7
-    write /dev/cpuset/top-app/cpus 0-7
     write /proc/sys/kernel/sched_upmigrate 60
     write /proc/sys/kernel/sched_downmigrate 25
     write /proc/sys/kernel/sched_group_downmigrate 35
     write /proc/sys/kernel/sched_group_upmigrate 70
-    write /proc/sys/kernel/sched_min_task_util_for_boost 35
-    write /proc/sys/kernel/sched_min_task_util_for_colocation 20
     write /proc/sys/kernel/sched_autogroup_enabled 0
     write /proc/sys/kernel/perf_cpu_time_max_percent 20
     write /proc/sys/vm/dirty_background_ratio 50
@@ -202,28 +137,17 @@ on property:sys.performance.level=5
     write /proc/sys/vm/vfs_cache_pressure 75
 
 on property:sys.performance.level=6
-    chmod 644 /sys/class/thermal/thermal_message/sconfig
-    write /sys/class/thermal/thermal_message/sconfig 10
-    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 3
     write /sys/class/kgsl/kgsl-3d0/force_bus_on 1
     write /sys/class/kgsl/kgsl-3d0/force_clk_on 1
     write /sys/class/kgsl/kgsl-3d0/force_no_nap 1
     write /sys/class/kgsl/kgsl-3d0/force_rail_on 1
     write /sys/class/kgsl/kgsl-3d0/idle_timer 99999
     write /sys/class/kgsl/kgsl-3d0/throttling 0
-    write /sys/module/lpm_levels/parameters/sleep_disabled 1
-    write /sys/module/lpm_levels/parameters/lpm_ipi_prediction 0
-    write /sys/module/lpm_levels/parameters/lpm_prediction 0
     write /sys/class/kgsl/kgsl-3d0/min_pwrlevel 0
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/background/cpus 6-7
-    write /dev/cpuset/top-app/cpus 0-7
     write /proc/sys/kernel/sched_upmigrate 60
     write /proc/sys/kernel/sched_downmigrate 15
     write /proc/sys/kernel/sched_group_downmigrate 25
     write /proc/sys/kernel/sched_group_upmigrate 50
-    write /proc/sys/kernel/sched_min_task_util_for_boost 0
-    write /proc/sys/kernel/sched_min_task_util_for_colocation 0
     write /proc/sys/kernel/sched_autogroup_enabled 0
     write /proc/sys/kernel/perf_cpu_time_max_percent 25
     write /proc/sys/vm/dirty_background_ratio 50
