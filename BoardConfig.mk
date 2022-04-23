@@ -157,7 +157,7 @@ TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.oneplus_k
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/device_framework_matrix.xml \
-    vendor/aosp/config/device_framework_matrix.xml
+    vendor/spark/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/android.hardware.vibrator_v1.0.xml
