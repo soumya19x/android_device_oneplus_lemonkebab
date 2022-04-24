@@ -86,4 +86,8 @@
 
     <!-- the number of the max cached processes in the system. -->
     <integer name="config_customizedMaxCachedProcesses">80</integer>
+    
+    <!-- WA for lags caused by blur/ qs and ls album art filter etc.. -->
+    <bool name="config_avoidGfxAccel">false</bool>
+    <bool name="config_sf_slowBlur">false</bool>
 </resources>
