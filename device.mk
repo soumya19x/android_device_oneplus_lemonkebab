@@ -23,9 +23,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Dalvik vm configs.
 $(call inherit-product, $(LOCAL_PATH)/kona_dalvik_heap_config.mk)
 
-# Inherit OnePlusCamera from vendor/oneplus/addons/camera
-$(call inherit-product, vendor/oneplus/addons/camera/camera-vendor.mk)
-
 OVERRIDE_TARGET_FLATTEN_APEX := true
 
 # Additional native libraries
