@@ -108,6 +108,7 @@ on early-boot
 
 on boot
     write /dev/cpuset/audio-app/cpus 1-2
+    write /dev/cpuset/display/cpus 4-7
     # Add a cpuset for the camera daemon
     # We want all cores for camera
     # set default schedTune value for camera-daemon

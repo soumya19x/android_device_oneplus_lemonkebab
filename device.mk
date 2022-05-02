@@ -278,6 +278,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc \
     init.performance_level.rc \
+    init.custom.rc \
     init.dc.rc
 
 # Component overrides

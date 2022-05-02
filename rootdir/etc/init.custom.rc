@@ -1,0 +1,24 @@
+# init.custom.rc - add init modifications here
+
+on init
+    mkdir /dev/stune/audio-app
+    chown system system /dev/stune/audio-app
+    chown system system /dev/stune/audio-app/tasks
+    chmod 0664 /dev/stune/audio-app/tasks
+
+    mkdir /dev/cpuset/audio-app
+    copy /dev/cpuset/cpus /dev/cpuset/audio-app/cpus
+    copy /dev/cpuset/mems /dev/cpuset/audio-app/mems
+
+    chown system system /dev/cpuset/audio-app
+    chown system system /dev/cpuset/audio-app/tasks
+    chmod 0664 /dev/cpuset/audio-app/tasks
+    
+    mkdir /dev/cpuset/display
+    copy /dev/cpuset/cpus /dev/cpuset/display/cpus
+    copy /dev/cpuset/mems /dev/cpuset/display/mems
+    
+    chown system system /dev/cpuset/display
+    chown system system /dev/cpuset/display/tasks
+    
+
