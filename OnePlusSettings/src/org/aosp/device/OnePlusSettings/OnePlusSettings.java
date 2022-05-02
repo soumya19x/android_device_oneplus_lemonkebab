@@ -74,7 +74,6 @@ public class OnePlusSettings extends PreferenceFragment
     public static final String KEY_VIBSTRENGTH = "vib_strength";
     public static final String KEY_TOUCHPANEL = "touchpanel";
     public static final String KEY_GAME_SWITCH = "game_mode";
-    public static final String KEY_GAME_INFO = "game_mode_info";
     public static final String KEY_EDGE_TOUCH = "edge_touch";
 
     private static final String PREF_DOZE = "advanced_doze_settings";
@@ -86,7 +85,6 @@ public class OnePlusSettings extends PreferenceFragment
     private static ListPreference mFpsInfoPosition;
     private static ListPreference mNrModeSwitcher;
     private static Preference mDozeSettings;
-    private static Preference mGameModeInfo;
     private static SwitchPreference mFpsInfo;
     private static SwitchPreference mDCModeSwitch;
     private static SwitchPreference mHBMModeSwitch;
@@ -168,20 +166,14 @@ public class OnePlusSettings extends PreferenceFragment
         mNrModeSwitcher.setOnPreferenceChangeListener(this);
 
         mGameModeSwitch = (SwitchPreference) findPreference(KEY_GAME_SWITCH);
-        mGameModeInfo = (Preference) findPreference(KEY_GAME_INFO);
-        if (isGamingModeSupported()) {
-            if (GameModeSwitch.isSupported()) {
-                mGameModeSwitch.setEnabled(true);
-            } else {
-                mGameModeSwitch.setEnabled(false);
-                mGameModeSwitch.setSummary(getString(R.string.unsupported_feature));
-            }
-            mGameModeSwitch.setChecked(GameModeSwitch.isCurrentlyEnabled(getContext()));
-            mGameModeSwitch.setOnPreferenceChangeListener(new GameModeSwitch());
+        if (GameModeSwitch.isSupported()) {
+            mGameModeSwitch.setEnabled(true);
         } else {
-            ((PreferenceGroup) findPreference(KEY_TOUCHPANEL)).removePreference(findPreference(KEY_GAME_SWITCH));
-            ((PreferenceGroup) findPreference(KEY_TOUCHPANEL)).removePreference(findPreference(KEY_GAME_INFO));
+            mGameModeSwitch.setEnabled(false);
+            mGameModeSwitch.setSummary(getString(R.string.unsupported_feature));
         }
+        mGameModeSwitch.setChecked(GameModeSwitch.isCurrentlyEnabled(getContext()));
+        mGameModeSwitch.setOnPreferenceChangeListener(new GameModeSwitch());
 
         mEdgeTouchSwitch = (SwitchPreference) findPreference(KEY_EDGE_TOUCH);
         mEdgeTouchSwitch.setEnabled(EdgeTouchSwitch.isSupported());
@@ -315,10 +307,6 @@ public class OnePlusSettings extends PreferenceFragment
         Intent fpsinfo = new Intent(context, FPSInfoService.class);
         context.stopServiceAsUser(fpsinfo, UserHandle.CURRENT);
         context.startServiceAsUser(fpsinfo, UserHandle.CURRENT);
-    }
-
-    public static boolean isGamingModeSupported() {
-        return !Build.DEVICE.equals("instantnoodle");
     }
 
     private boolean setNrModeChecked(int mode) {

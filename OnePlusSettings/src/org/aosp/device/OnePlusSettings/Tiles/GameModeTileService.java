@@ -51,7 +51,7 @@ public class GameModeTileService extends TileService {
         super.onStartListening();
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         enabled = GameModeSwitch.isCurrentlyEnabled(this);
-        getQsTile().setState(OnePlusSettings.isGamingModeSupported() && GameModeSwitch.isSupported() ? (enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE) : Tile.STATE_UNAVAILABLE);
+        getQsTile().setState(GameModeSwitch.isSupported() ? (enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE) : Tile.STATE_UNAVAILABLE);
         getQsTile().updateTile();
     }
 
