@@ -588,6 +588,7 @@ PRODUCT_PACKAGES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0.vendor \
     android.hardware.vibrator@1.0-service
 
 # Seccomp policy
@@ -697,6 +698,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-    
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/oneplus/lemonkebab/lemonkebab-vendor.mk)
