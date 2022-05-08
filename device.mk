@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Dalvik vm configs.
-$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+$(call inherit-product, $(LOCAL_PATH)/kona_dalvik_heap_config.mk)
 
 # Inherit OnePlusCamera from vendor/oneplus/addons/camera
 $(call inherit-product, vendor/oneplus/addons/camera/camera-vendor.mk)
